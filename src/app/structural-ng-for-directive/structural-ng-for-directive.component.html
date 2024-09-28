@@ -1,0 +1,39 @@
+<h3>structural-ngfor-directive Example</h3>
+
+<h3>List Of Courses</h3>
+<ul>
+    <li *ngFor="let item of courses">{{item}}</li>
+</ul>
+
+<!-- Using Index -->
+
+<ul>
+    <!-- apko 0 se start krna hoga to {{i}} and 1 se start krna hoto {{i+1}} -->
+    <li *ngFor="let item of courses; let i=index ">{{i+1}}-{{item}}</li>
+    
+</ul>
+<br>
+<br>
+<div class="container">
+    <table class="table table-bordered text-center">
+        <thead>
+            <!-- tr pe kyu apply kiya? bcz us table ke under multipe tr create krke use usse UI pe display krna hai -->
+          <tr>
+            <th scope="col">Sr No.</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+           <ng-container *ngFor="let product of products; let i=index"> 
+          <tr *ngIf="product.price > 50000">
+            <th>{{i+1}}</th>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
+</div>

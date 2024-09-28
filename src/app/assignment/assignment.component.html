@@ -1,0 +1,70 @@
+<h2>Calculator<h2>
+<!-- Assignment 1 -->
+
+ <div>
+    <label>Number1: </label>
+    <input type="text" id="id1" [(ngModel)]="num1" placeholder="Value">
+    <br>
+    <br>
+    <label>Number2: </label>
+    <input type="text" id="id2" [(ngModel)]="num2" placeholder="Value">
+    <br>
+    <br>
+    <button type="button"  (click)="add()">Addition</button>
+    <button type="button"  (click)="sub()">Substraction</button>
+    <button type="button"  (click)="mult()">Multiplication</button>
+    <button type="button"  (click)="div()">Devision</button>
+    <br>
+    <br>
+    <label>Result :</label>
+    <input type="text" id="res" [(ngModel)]="result">
+     <!-- - <p>{{result}}</p>    -->
+</div>  
+
+<hr>
+
+<!-- Assignment 2 -->
+<h5>Total Price Result</h5>
+<div>
+    <label>Price: </label>
+    <input type="text" [(ngModel)]="price" (ngModelChange)="updateTotalPrice()">
+  </div>
+  
+  <div>
+    <label>Quantity: </label>
+    <input type="text" [(ngModel)]="quantity" (ngModelChange)="updateTotalPrice()">
+  </div>
+  
+  <div>
+    <label>Discount: </label>
+    <input type="text" [(ngModel)]="discount" (ngModelChange)="updateTotalPrice()">
+  </div>
+  
+  <div>
+    <label>Total Price: </label>
+    <input type="text" [value]="totalPrice" disabled>
+  </div>
+
+  <hr>
+<!-- Assignment 3 -->
+
+<h5>Age Calculator</h5>
+<div class="age-calculator">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="person.name" /> <br>
+  
+    <label for="mobileNo">Mobile No:</label>
+    <input type="text" id="mobileNo" [(ngModel)]="person.mobileNo" /> <br>
+  
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" [(ngModel)]="person.dob" (ngModelChange)="calculateAge()" /> <br>
+  
+    <label for="age">Age:</label>
+    <input type="text" id="age" [value]="person.age" disabled />
+</div>
+
+
+<!-- Assignment 4 -->
+
+
+  

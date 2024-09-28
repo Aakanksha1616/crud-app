@@ -1,0 +1,53 @@
+<p>data-binding works!</p>
+<h2> One way data binding</h2>
+<!-- <h2>Heyy , {{useremailId}}</h2>
+<h3> Your registerd name, {{userName}}</h3> -->
+
+<!-- InterPolation Property -->
+<!-- <p>Employee Name: {{employeeObj.empName}}</p> -->
+<!-- <p>Employee Designation: {{employeeObj.Designation}}</p> -->
+<!-- <p>Employee Designation: {{employeeObj.Hobbies[0]}} ,{{employeeObj.Hobbies[2]}}</p> -->
+<!-- <p>{{employeeObj.Hobbies}}</p> -->
+
+<!-- property Binding -->
+<!-- <img [src] ="imgPath" alt="Logo">
+<br>
+<br>
+
+<button type="submit"   [disabled]="isDisabled">submit</button> <br> <br> <hr> -->
+
+<!-- using Interpolation Property -->
+<!-- <button type="submit"    disabled={{isDisabled}}>submit</button> -->
+
+<hr>
+
+<!-- <h2> Two way data binding </h2>
+
+<button type="button" (click)="btnClick()">Click Me</button><br><br>
+<button type="button" (click)="Increment()">Increment</button>
+<span class="demo">{{counter}}</span>
+<button type="button" (click)="Decrement()">Decrement</button> <br> <br> -->
+
+<!-- <label for="id1">first Name</label> -->
+<!-- <input type="text" name="Fname" id="id1" (change)="modifyFname()"> -->
+<!-- <input type="text" name="Fname" id="id1" (input)="modifyFname()"> -->
+<!-- <input type="text" name="Fname" id="id1" (keyup)="modifyFname()"> -->
+<!-- <input type="text" name="Fname" id="id1" (blur)="modifyFname()"> -->
+<!-- <input type="text" name="Fname" id="id1" (change)="modifyFname($event)">
+<br>
+<br>
+<p>first Name is: {{firstName}}</p> -->
+
+<!-- Assignment -->
+<div>
+    <label>Price</label>
+    <input type="number" (input)="price" (change)=" modifyPrice($event)" />
+  
+    <label>Quantity</label>
+    <input type="number" (input)="quantity" (change)="modifyQauntity($event)" /><br><br>
+  
+    <button (click)="calculatetotalPrice()">Total Price</button>
+  
+    <p>Total Price: {{ totalPrice }}</p>
+    
+</div>

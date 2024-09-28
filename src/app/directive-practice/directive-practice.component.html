@@ -1,0 +1,51 @@
+<h4> Structural Directives : *ngIf Example<h4>
+
+        <div *ngIf="age >= 17">
+            <h3>you are eligible for voting</h3>
+        </div>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, ex? Dolores accusantium assumenda
+            laboriosam omnis placeat asperiores quis provident, maiores quibusdam rem ipsum debitis. Dolorum blanditiis
+            quaerat quisquam laudantium non, voluptas saepe repudiandae numquam voluptates atque, cumque unde accusamus!
+            Voluptatem.</p>
+
+        <p *ngIf="isShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cum deserunt accusamus inventore quis officia
+            recusandae libero magnam totam, culpa ratione reprehenderit ipsam dolores aperiam?</p>
+        <!-- ngif: !isShow kiya ! lgaya to ye true ho gya quki ts me value false hai -->
+        <button type="button" *ngIf="!isShow" (click)="displayMoreContent()">Read More</button> &nbsp;
+        <!-- ngif: isShow iski value hai false to ye value nhi dikhegi -->
+        <button type="button" *ngIf="isShow" (click)="removeContent()">Hide</button>
+
+        <hr>
+
+        <h4> Structural Directives : *ngIf-else Example<h4>
+        
+        <div *ngIf="!isLoggedIn; else logoutBlock">  
+        <!-- nhIf jab false hoga else block (logoutBlock) execute hoga -->
+        <h3>Login</h3>
+        <button type="button" (click)="login()">Login</button>   &nbsp;
+        </div>
+
+        <ng-template #logoutBlock>
+        <h3>Logout</h3>
+        <button type="button" (click)="logout()">Logout</button>   
+        </ng-template>
+
+        <hr>
+
+        <h4>Structural directive : *ngIfThenElse Example</h4>
+         <!-- condition true hoti hai then loginBlock / condition false hoti hai logoutBlock execute kro-->
+        <div *ngIf="!isLoggedIn; then loginBlock else logoutBlock" ></div>
+
+        <ng-template #loginBlock>
+        <h3>Login</h3>
+        <button type="button" (click)="login()">Login</button>
+        </ng-template>
+
+        <ng-template #logoutBlock>
+        <h3>Logout</h3>
+        <button type="button" (click)="logout()">Logout</button>   
+        </ng-template>
+         
+
+

@@ -1,0 +1,38 @@
+<p>attribute-directive works!</p>
+
+<div class="container">
+  <table class="table table-bordered text-center">
+    <thead>
+      <!-- tr pe kyu apply kiya? bcz us table ke under multipe tr create krke use usse UI pe display krna hai -->
+      <tr>
+        <th scope="col">Sr No.</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+
+  <!-- ng-class -->
+    <!--                  
+           <tr *ngFor="let product of products; let i=index; let f=first" [ngClass]="{'bg-primary':f,'bg-secondary':product.quantity > 2}">
+             <th>{{i+1}}</th>
+             <td>{{product.productName}}</td>
+             <td>{{product.price}}</td>
+             <td>{{product.quantity}}</td>
+           </tr>
+          -->
+
+        
+          <tr  *ngFor="let product of products; let i=index" [ngStyle]="{'background-color':product.price > 50000 ? 'green' : 'yellow'}"> 
+            <th>{{i+1}}</th>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+          </tr>
+        
+        
+        
+               
+
+  </table>
+</div>

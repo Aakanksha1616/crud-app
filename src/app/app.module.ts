@@ -14,6 +14,7 @@ import { DirectivePracticeComponent } from './directive-practice/directive-pract
 import { StructuralNgForDirectiveComponent } from './structural-ng-for-directive/structural-ng-for-directive.component';
 import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
 import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AttributeDirectiveComponent } from './attribute-directive/attribute-dir
     DirectivePracticeComponent,
     StructuralNgForDirectiveComponent,
     NgSwitchExampleComponent,
-    AttributeDirectiveComponent
+    AttributeDirectiveComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

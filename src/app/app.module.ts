@@ -8,7 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AssignmentComponent } from './assignment/assignment.component';
 import { DirectivePracticeComponent } from './directive-practice/directive-practice.component';
 import { StructuralNgForDirectiveComponent } from './structural-ng-for-directive/structural-ng-for-directive.component';
@@ -34,7 +34,8 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
